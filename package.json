@@ -1,0 +1,17 @@
+{
+  "name": "usertask",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev:fe": "yarn  --cwd ./frontend dev",
+    "dev:be": "yarn  --cwd ./backend start:dev",
+    "dev": "concurrently --kill-others \"yarn --cwd ./backend start:dev\" \"yarn  --cwd ./frontend dev\"",
+    "postinstall": "concurrently \"yarn --cwd ./backend\" \"yarn  --cwd ./frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
